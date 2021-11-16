@@ -1,0 +1,352 @@
+/* Applies box-sizing to all elements of the program*/
+* {
+    box-sizing: border-box;
+}
+
+/* Sets a grid and aligns items and content to center of the body and html of the program */
+html, body{
+    display:grid;
+    background-color:white;
+    grid-template-rows: 75px 1fr 100px;
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+main{
+    display:grid;
+    height:100%;
+}
+
+.container {
+    background-color: black;
+    max-width: 100%;
+    max-height: 100%;
+} 
+
+/* controls the elements and attributes in the drop down menu*/
+.dropdownmenu {
+    display: block;
+    position:relative;
+    text-decoration: none;
+    color:white;
+}
+
+/*Controls the elements of the content of the drop down menu*/
+ .dropdowncontent{
+     display:none;
+     text-decoration: none;
+     position:absolute;
+     background-color: #0C0F0A;
+     min-width: 160px;
+     padding: 12px 16px;
+     z-index:1;
+     color:white;
+}
+
+ /* Controls attributes of the hover to the drop down menu and dropwdown content*/
+.dropdownmenu:hover .dropdowncontent{
+    display:block;
+    }
+
+/* Controls the attributes for the drop down menu that hovers */
+    .dropdownmenu:hover{
+        color:#EA638C;
+    }
+
+/* Controls the elements of the span */
+span{
+    color:#EA638C;
+}
+
+/*Repositions pictures
+.bride-and-groom {
+    display:grid;
+    width:50%;
+    float:left;
+}
+
+/*Changes attributes and elements of the footer of the program*/
+.footer{
+    Display:block;
+    width:50%;
+
+}
+
+/*repositions icons on the page
+.small-logo img{
+    display:grid;
+    width:100%;
+    float:left;
+    position: 30px;
+}
+
+/*Repositions copyright on the page
+.copyright{
+    display:flex;
+    float:left;
+    justify-content:flex-start;
+    position: relative;
+
+}
+
+/*Changes all atrribute and elements in a div*/
+div{
+    color:#0C0F0A;
+}
+/* Changes attributes and elements in the section class about*/
+.about{
+    background-color:#FFDAD9;
+    border:solid 2px #EA638C;
+}
+/* Attributes in Class Contact*/
+.contact{
+    color:#0C0F0A;
+    background-color: #FFDAD9;
+    border: solid 2px #EA638C;
+    }
+
+/* Changes all elements and characteristics of class portrait*/
+.portrait{
+    width:50%;
+}
+
+/* Controls attributes on page portfolio */
+.portfolio .container{
+ width:100%;
+}
+
+/* Changes all elements in class menu*/
+.menu{
+    font-family: Big Caslon;
+    font-size: 24px;
+    color:white;
+    text-decoration: none;
+}
+
+/* Controls attributes in li a */
+li a{
+    display: block;
+    font-family: Big Caslon;
+    color:black;
+    text-decoration: none;
+}
+
+/* Sets color of menu selection when active*/
+ li a.active{
+    color:#EA638C;
+}
+
+/* Controls color of menu when hovering over none active menu selections*/
+li a:hover:not(active){
+    background-color:#EA638C;
+    color:white;
+}
+
+/* Elements and characteristics for header size color font */
+header{
+    font-family:AdornS Pomander;
+    font-size: 4rem;
+    color:#EA638C;
+    align-items: center;
+}
+
+/*Changes elements and characteristics of header 2-h2*/
+h2{
+    font-size:14px;
+    font-family:Big Caslon;
+}
+
+/* Changes the element h3 header and its attributes*/
+h3{
+    font-family: AdornS Pomander;
+    font-size: 24px;
+}
+
+/* Attributes for anything in  a paragraph element */
+p{
+font-family: Big Caslon;
+Font-size:12px;
+color:#0C0F0A;
+}
+
+/* Affects any image element in the program*/
+img{
+    border: solid 0.5rem #FFEE88;
+    
+}
+
+/* Changes attributes to image in logo class removes a border on specified images*/ 
+.large-logo img,
+.small-logo img,
+.footer img,
+.contact img,
+.idbox img ,
+.dropdownmenu img{
+    border: none;
+}
+
+/*Changes the attributes in a button: color border */
+button {
+    color:#EA638C;
+    border:2px solid #FFEE88;
+}
+
+/* Controls all attributes in h4 headers */
+h4{
+    color:#EA638C;
+    font-family:AdornS Pomander;
+    font-size: 2rem;
+}
+
+h6{
+    color:#0C0F0A;
+    font-family: AdornS Pomander;
+    font-size:2rem;
+}
+
+/* Attributes in class id*/
+.idbox{
+    background-color: #FFDAD9;
+    border: 2rem solid #EA638C;
+}
+
+/* Attributes in class videography*/
+.videography{
+    background-color: #F2F3Ae;
+    border:solid 1rem #FFEE88;
+
+}
+
+/* Animations*/
+ .rotate {
+     animation-name: rotate;
+     animation-duration: 2s;
+     animation-iteration-count: infinite;
+ }
+
+.box {
+    display:flex;
+    width: 100px;
+    height: 100px;
+    background-color: #EA638C;
+}
+
+.jump {
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.bar {
+    width: 20px;
+    height: 100px;
+    margin: 0 2px;
+    background-color:red;
+}
+
+.wave {
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.wave:nth-child(1){
+    animation-delay: 0.2s;
+}
+
+.wave:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+.wave:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+.wave:nth-child(4){
+    animation-delay: 0.8s;
+}
+
+.wave:nth-child(5){
+    animation-delay: 1s;
+}
+
+/*Keyframes for animations */
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+   
+@keyframes jump{
+
+
+
+         50% {
+        
+            transform: translate(0, -100px);
+
+        }
+}
+
+    @keyframes waves {
+        0%,
+        50%,
+        100% {
+            background-color: #FFEE88;
+            transform: scale(1);
+        }
+
+        25% {
+            background-color: #FFDAD9;
+            transform: scale(1, 2);
+        }
+        
+        75%{
+            background-color: #EA638C;
+            transform: scale(1, 0.5);
+        }
+}
+    
+
+/* Adjusts atrributes for screen size for Tablet*/
+@media screen and (min-width: 600px){
+ main{
+     
+     grid-template-rows: repeat(2, 1fr);
+ }
+    .container{
+        width: 650px;
+    }
+    
+header{
+    font-size:8rem;
+}
+/*.portfolio */
+
+
+
+/* Adjusts attributes and elements for screen size Web page */
+
+@media screen and (min-width: 900px){
+
+    main{
+        
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .container{
+        width: 900px;
+    }
+    header{
+        font-size: 10rem;
+    }
+
+.footer{
+    width:900px;
+}
+
+}
+}
